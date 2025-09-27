@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Signal Watcher - Frontend
 
-## Getting Started
+Esta es la aplicación de frontend para Signal Watcher, una interfaz de usuario moderna y reactiva construida con Next.js y TypeScript. Permite a los analistas de seguridad interactuar con el backend para gestionar listas de observación y analizar eventos de seguridad.
 
-First, run the development server:
+## Características
+
+- **Interfaz Moderna:** Construida con Tailwind CSS para un diseño limpio y responsivo.
+- **Componentes Reutilizables:** Uso de componentes de UI para consistencia y mantenibilidad.
+- **Páginas Dinámicas:** Las páginas de Watchlists y Eventos cargan y envían datos a la API del backend en tiempo real.
+- **Notificaciones Toast:** Feedback inmediato para el usuario en operaciones clave (crear, eliminar) usando `react-hot-toast`.
+- **Localización:** La interfaz de usuario está completamente traducida al español.
+
+## Tecnologías Utilizadas
+
+- **Next.js** (con App Router)
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+- **react-hot-toast** para notificaciones.
+
+---
+
+## Pasos para la Instalación y Ejecución
+
+Sigue estos pasos para levantar el entorno de desarrollo local.
+
+### 1. Prerrequisitos
+
+- **Node.js** (v18 o superior)
+- **npm** o un gestor de paquetes compatible.
+- **El backend de Signal Watcher debe estar corriendo.** Por defecto, el frontend intentará conectarse a `http://localhost:3001`.
+
+### 2. Clonar y Configurar el Proyecto
+
+```bash
+# Navega al directorio del frontend
+cd signal-watcher-frontend
+
+# Instala las dependencias
+npm install
+```
+
+### 3. Configurar Variables de Entorno
+
+El frontend buscará la URL del backend en una variable de entorno. Aunque no es estrictamente necesario para el desarrollo local (ya que tiene un valor por defecto), es una buena práctica crear un archivo `.env.local`:
+
+```env
+# URL base de la API del backend
+NEXT_PUBLIC_API_URL=http://localhost:3001/api/v1
+```
+
+### 4. Ejecutar el Servidor de Desarrollo
+
+Una vez completados los pasos anteriores, puedes iniciar el servidor:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+La aplicación estará disponible en `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
