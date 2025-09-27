@@ -1,7 +1,7 @@
 import toast from 'react-hot-toast';
 import { CreateEventForm, CreateWatchlistForm } from '@/types/events.types';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api/v1';
+const API_BASE_URL = `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001'}/api/${process.env.NEXT_PUBLIC_API_VERSION || 'v1'}`;
 
 const handleResponse = async (response: Response) => {
   const contentType = response.headers.get('content-type');
