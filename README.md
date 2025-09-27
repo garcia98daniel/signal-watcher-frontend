@@ -46,8 +46,8 @@ El frontend buscará la URL del backend en una variable de entorno. Aunque no es
 
 ```env
 # URL base de la API del backend
-BACKEND_URL=http://localhost:3001
-API_VERSION=v1
+NEXT_PUBLIC_API_URL=http://localhost:3001
+NEXT_PUBLIC_API_VERSION=v1
 ```
 
 ### 4. Ejecutar el Servidor de Desarrollo
