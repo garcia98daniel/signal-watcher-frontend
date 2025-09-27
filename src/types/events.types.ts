@@ -32,7 +32,7 @@ export interface SecurityEvent {
   severity?: SeverityLevel;
   status: EventStatus;
   aiAnalysis?: AIAnalysis;
-  rawData?: Record<string, any>;
+  rawData?: Record<string, unknown>;
   createdAt: string;
   updatedAt: string;
 }
@@ -55,7 +55,7 @@ export interface EventSimulation {
   description: string;
   source: string;
   severity?: SeverityLevel;
-  metadata?: Record<string, any>;
+  metadata?: Record<string, unknown>;
 }
 
 // API Response types
@@ -93,7 +93,7 @@ export interface CreateEventForm {
   source: string;
   watchlistId: string;
   type: EventSimulation['type'];
-  metadata?: Record<string, any>;
+  metadata?: Record<string, unknown>;
 }
 
 // UI State types
